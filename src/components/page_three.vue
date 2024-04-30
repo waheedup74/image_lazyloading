@@ -18,7 +18,7 @@
           class="person-image clickable-image" 
           alt="Person Image"
           :style="{ width: imageSize + 'px', height: 'auto' }" 
-          v-lazy= "dataObj.THUMBNAIL">
+          v-lazy="dataObj.THUMBNAIL">
         </div>
         <div class="col-md-9">
       
