@@ -9,19 +9,16 @@
         <div class="col-md-9">
 
             <div class="list_item" v-for="dataObj in selectedRESEARCHERS_LIST" :key="dataObj.EMAIL">
-            
-         
-          
-         
+
         <div class="row">
         <div class="col-md-3">
           <!-- Column 1 content -->
-          <img  loading="lazy" @error="imageLoadError" 
+          <img @error="imageLoadError" 
           @click.once= "loadSelectedResearcher(dataObj)"
           class="person-image clickable-image" 
           alt="Person Image"
           :style="{ width: imageSize + 'px', height: 'auto' }" 
-          :src= "dataObj.THUMBNAIL">
+          v-lazy= "dataObj.THUMBNAIL">
         </div>
         <div class="col-md-9">
       
